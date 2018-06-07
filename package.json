@@ -1,0 +1,28 @@
+{
+  "name": "stock_ticker",
+  "version": "1.0.0",
+  "description": "A lightweight app to track a stock ticker in real time.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teddy-owen/Stock_Ticker.git"
+  },
+  "keywords": [
+    "stock",
+    "ticker",
+    "prices"
+  ],
+  "author": "Teddy Owen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teddy-owen/Stock_Ticker/issues"
+  },
+  "homepage": "https://github.com/teddy-owen/Stock_Ticker#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

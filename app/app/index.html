@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app='stockTicker'>
+<head>
+	<title>Stock Ticker App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boostrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<!-- My CSS -->
+	<link rel="stylesheet" type="text/css" href="app.css">
+
+	<!-- Angular Dist -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.0/angular.min.js"></script>
+
+	<!-- Angular Route Dist -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.0/angular-route.min.js"></script>
+	
+	<!-- Angular App Files -->
+	<script type="text/javascript" src="app.module.js"></script>
+	<script type="text/javascript" src="app.config.js"></script>
+		<!-- Price Display -->
+		<script type="text/javascript" src="price-display/price-display.module.js"></script>
+		<script type="text/javascript" src="price-display/price-display.component.js"></script>
+		<!-- Logo Display -->
+		<script type="text/javascript" src="logo-display/logo-display.module.js"></script>
+		<script type="text/javascript" src="logo-display/logo-display.component.js"></script>
+		<!-- Fetch Ticker -->
+		<script type="text/javascript" src="fetch-ticker/fetch-ticker.module.js"></script>
+		<script type="text/javascript" src="fetch-ticker/fetch-ticker.component.js"></script>
+
+</head>
+<body class="bg-secondary">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col"></div>
+			<div class="col-12 col-md-6">
+				<div ng-view></div>
+			</div>
+			<div class="col"></div>
+		</div>
+	</div>
+</body>
+</html>

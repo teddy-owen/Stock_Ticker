@@ -1,0 +1,21 @@
+h1 {
+	text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.logo-outer{
+	border-radius: 20%;
+	height: 175px; 
+}
+
+.logo-inner{
+	background-color:rgba(0, 0, 0, 0.1);
+	border-radius: 25%;
+	opacity:20%;	 
+}
+
+.image-box {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
