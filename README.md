@@ -1,5 +1,5 @@
 # Stock_Ticker
-An AngularJS app to get a live feed of a stock price.
+An AngularJS app to get a live feed of a stock price using the IEX API.
 
 <img src="https://github.com/teddy-owen/Stock_Ticker/blob/master/images/ticker1.PNG" alt="drawing" height="450px" width="400px"/> <img src="https://github.com/teddy-owen/Stock_Ticker/blob/master/images/ticker2.PNG" alt="drawing" height="450px" width="400px"/>
 
