@@ -1,1 +1,1 @@
-<h2 class="text-white text-center">{{ $ctrl.price | currency:"$":2 }} <span class="{{ $ctrl.up ? 'text-success':'text-danger' }}"><i class="fas fa-caret-{{ $ctrl.up ? 'up':'down' }}"></i></span> </h2>
+<h2 ng-class="{'pulse':$ctrl.pulse}" class="text-white text-center pulse">{{ $ctrl.price | currency:"$":2 }} <span ng-class="{'text-success': $ctrl.up, 'text-danger': ! $ctrl.up}"><i ng-class="{'fa-caret-up': $ctrl.up, 'fa-caret-down': ! $ctrl.up}"class="fas"></i></span> </h2>

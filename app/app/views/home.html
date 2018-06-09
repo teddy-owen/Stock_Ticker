@@ -1,5 +1,6 @@
-<div class="container">
-	<div class="row mt-5">
+<div class="container" >
+	<div ng-model="$ctrl.ticker"></div>
+	<div class="row mt-1 mt-sm-5">
 		<div class="col">
 			<h1 class="text-white text-center">Stock Ticker</h1>
 		</div>
@@ -7,21 +8,21 @@
 	<div class="row my-4 my-sm-5">
 		<div class="col"></div>
 		<div class="col-9 col-sm-3">
-			<logo-display></logo-display>
+			<logo-display ticker="$ctrl.ticker"></logo-display>
 		</div>
 		<div class="col"></div>
 	</div>	
 	<div class="row my-4 my-sm-5">
 		<div class="col"></div>
 		<div class="col-9 col-sm-3">
-			<price-display></price-display>
+			<price-display ticker="$ctrl.ticker"></price-display>
 		</div>
 		<div class="col"></div>
 	</div>	
 	<div class="row my-4 my-sm-5">
 		<div class="col col-sm-4"></div>
 		<div class="col-12 col-sm-7">
-			<fetch-ticker></fetch-ticker>
+			<fetch-ticker ticker="$ctrl.ticker"></fetch-ticker>
 		</div>
 		<div class="col"></div>
 	</div>	

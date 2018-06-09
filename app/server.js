@@ -12,5 +12,5 @@ app.get('/', function(req, res){
 });
 
 var host = process.argv[2] ? process.argv[2]:"127.0.0.1";
-var port = 8000;
+var port = process.argv[3] ? process.argv[3]:8000;
 app.listen(port, host, () => console.log('Stock Ticker app ready at http://'+host+':'+port))

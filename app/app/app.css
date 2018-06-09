@@ -2,20 +2,36 @@ h1 {
 	text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
 }
 
+h2{
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
 .logo-outer{
 	border-radius: 20%;
 	height: 175px; 
 }
 
 .logo-inner{
-	background-color:rgba(0, 0, 0, 0.1);
-	border-radius: 25%;
-	opacity:20%;	 
+	background-color:rgba(0, 0, 0, 0.0);
+	transition: background-image 0.25s ease-in-out;
 }
 
 .image-box {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+@keyframes pulse {
+    0%   {text-shadow: 0px 0px rgba(0, 0, 0, 0.3);transform: scale(1.05, 1.05);}
+    25%  {text-shadow: 1px 1px rgba(0, 0, 0, 0.3);transform: scale(1.1, 1.1);}
+    50%  {text-shadow: 3px 3px rgba(0, 0, 0, 0.3);transform: scale(1.15, 1.15);}
+    75%  {text-shadow: 1px 1px rgba(0, 0, 0, 0.3);transform: scale(1.1, 1.1);}
+    100% {text-shadow: 0px 0px rgba(0, 0, 0, 0.3);transform: scale(1.05, 1.05);}
+}
+
+.pulse{
+	animation-name: pulse;
+	animation-duration: 0.4s;
 }
 
