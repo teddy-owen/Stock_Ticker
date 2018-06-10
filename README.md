@@ -14,3 +14,15 @@ An AngularJS app to get a live feed of a stock price using the IEX API.
 1. Once the dependencies are installed, run `npm start [host (default:localhost)] [port (default:8000)]`
 1. An express server will "spin up" and the app should be available in your browser at `http://localhost:8000` or the location you set 
 1. Open the app in you browser and enter a valid stock ticker
+
+### Implementation
+- Front end
+  - AngularJS served via CDN at cdnjs.com
+  - Bootstrap served via CDN
+  - Font Awesome served via CDN
+  - Angular app files, CSS and HTML served via Express server backend
+  - Stock data fetched client-side via IEX API
+- Back end
+  - NodeJS running Express server
+  - Single route serving index.html with AngularJS 
+  - Serves static files
