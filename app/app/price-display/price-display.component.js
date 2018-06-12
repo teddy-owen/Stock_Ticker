@@ -26,7 +26,7 @@ angular.module('priceDisplay').component('priceDisplay',{
 
 		self.fetchPrice = async function fetchPrice(callback=function(){}){
 			var url = 'https://api.iextrading.com/1.0/stock/'+ self.ticker +'/price';
-			fetch(url).then(function(response){
+			return fetch(url).then(function(response){
 				return response.json();
 			}).then(function(json){
 				self.price = Number(json);
@@ -38,14 +38,15 @@ angular.module('priceDisplay').component('priceDisplay',{
 
 
 		self.tick = function tick(){
-			self.fetchPrice();
+			self.fetchPrice().then(function(){
+				if (self.price > self.last_price) {
+					self.up = true;
+				}else if (self.price < self.last_price){
+					self.up = false;
+				}
+				self.last_price = self.price;
+			});
 			self.pulseNow();
-			if (self.price >= self.last_price) {
-				self.up = true;
-			}else{
-				self.up = false;
-			}
-			self.last_price = self.price;
 			return;
 		};
 
