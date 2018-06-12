@@ -15,6 +15,9 @@ angular.module('logoDisplay').component('logoDisplay',{
 		
 				   
 				self.fetchUrl = async function fetchUrl(callback=function(){}){
+					if (!self.ticker) {
+						return;
+					}
 					console.log("FetchURL");
 					var url = 'https://api.iextrading.com/1.0/stock/'+ self.ticker +'/logo';
 					fetch(url).then(function(response){
@@ -30,6 +33,9 @@ angular.module('logoDisplay').component('logoDisplay',{
 				};
 	
 				self.fetchName = function fetchName(){
+					if (!self.ticker) {
+						return;
+					}
 					var url = 'https://api.iextrading.com/1.0/stock/'+ self.ticker +'/company';
 					fetch(url).then(function(response){
 						return response.json();
