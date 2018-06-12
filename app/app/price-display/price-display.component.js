@@ -33,6 +33,7 @@ angular.module('priceDisplay').component('priceDisplay',{
 			return fetch(url).then(function(response){
 				return response.json();
 			}).then(function(json){
+				self.pulseNow();
 				self.price = Number(json);
 			}).catch(function(error) {
     			// If there is any error you will catch them here
@@ -49,7 +50,7 @@ angular.module('priceDisplay').component('priceDisplay',{
 					self.up = false;
 				}
 				self.last_price = self.price;
-				self.pulseNow();
+
 			});
 			
 			return;
